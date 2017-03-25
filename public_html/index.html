@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Alert sample</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button onclick="showAlert()">Show Alert</button>
+        <button onclick="showConfirm()">Format C:</button>
+        <button onclick="showPrompt()">Type smthg.</button>
+
+
+            <div id="showConfirmResult"></div>
+
+            <div id="showPromptResult"></div>
+
+        <script>
+            function showAlert() {
+                alert("Null");
+            }
+
+            function showConfirm() {
+                var msgText;
+                if (confirm("Отфматировать C: ?") == true) {
+                    msgText = "Я не обязан исполнять твои приказы";
+                } else {
+                    msgText = ";(";
+                }
+                document.getElementById("showConfirmResult").innerHTML = msgText;
+            }
+
+            function showPrompt() {
+                var someText = prompt("Введите номер кредитной карты");
+                if (someText != null) {
+                    document.getElementById("showPromptResult").innerHTML = "Номер вашей кредитки: " + someText;
+                } else {
+                    document.getElementById("showPromptResult").innerHTML = "Ну пожалуйста :(";
+                }
+            }
+        </script>
+        <a href="jquery_ui_dialog/Default_functionality.html">дефолт функшионалити</a>
+        <br>
+        <a href="jquery_ui_dialog/Animation.html">анимейшн</a>
+        <br>
+        <a href="jquery_ui_dialog/Modal%20confirmation.html">модал конфирмейшн</a>
+        <br>
+        <a href="jquery_ui_dialog/modal%20form.html">модал форм</a>
+        <br>
+        <a href="jquery_ui_dialog/modal%20message.html">модал меседж</a>
+        <br>
+        <a href="bootstrap/basic.html">bootstrap</a>
+        
+    </body>
+</html>
